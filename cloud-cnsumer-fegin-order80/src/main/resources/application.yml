@@ -1,0 +1,18 @@
+server:
+  port: 80
+spring:
+  application:
+    name: cloud-order-feign-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+  instance:
+    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 10
+ribbon:
+  ReadTimeout: 5000
+  ConnectionTimeout: 5000
+logging:
+  level:
+    com.atguigu.springcloud.service.OrderFeignService: debug

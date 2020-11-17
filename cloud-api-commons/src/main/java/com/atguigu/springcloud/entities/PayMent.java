@@ -1,0 +1,16 @@
+package com.atguigu.springcloud.entities;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
+
+
+@Data
+@NoArgsConstructor  //无参
+@AllArgsConstructor //全参数
+public class PayMent implements Serializable {
+    private Long id;
+    private String serial;
+}

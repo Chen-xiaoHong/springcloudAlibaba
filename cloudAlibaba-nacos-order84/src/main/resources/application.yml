@@ -1,0 +1,18 @@
+server:
+  port: 84
+spring:
+  application:
+    name: cloud-consumer-order
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8080
+service:
+  url: http://nacos-provider-payment
+feign:
+  sentinel:
+    enabled: true
